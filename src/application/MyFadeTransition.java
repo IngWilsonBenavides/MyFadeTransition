@@ -26,7 +26,7 @@ public class MyFadeTransition extends Application {
 	@Override
 	public void start(Stage stage) {
 		final Double startOpacity = 1.0;
-		final Double endOpacity = 0.2;
+		final Double endOpacity = 0.0;
 
 		DropShadow dropShadow = new DropShadow();
 		dropShadow.setOffsetX(5);
@@ -48,7 +48,7 @@ public class MyFadeTransition extends Application {
 		stackPane.setPrefHeight(200);
 		stackPane.setPrefWidth(400);
 
-		FadeTransition fadeTransition = new FadeTransition(Duration.seconds(2), stackPane);
+		FadeTransition fadeTransition = new FadeTransition(Duration.seconds(2), text);
 
 		fadeTransition.setOnFinished(event -> {
 			System.out.format("End opacity = %.1f\n", fadeTransition.getNode().getOpacity());
